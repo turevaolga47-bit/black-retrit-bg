@@ -957,6 +957,54 @@
     .reveal:nth-child(2) { transition-delay: .12s; }
     .reveal:nth-child(3) { transition-delay: .24s; }
 
+    /* ── About / Diplomas ── */
+    #about { background: rgba(0,0,0,.25); }
+    .about-wrap {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+      margin-top: 40px;
+    }
+    .about-photo-col { flex: 0 0 260px; }
+    .about-photo {
+      width: 260px;
+      height: 300px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 16px;
+      border: 2px solid rgba(201,168,76,.35);
+      box-shadow: 0 8px 40px rgba(0,0,0,.5);
+      display: block;
+    }
+    .about-text-col { flex: 1; }
+    .about-text-col p { color: var(--text-dim); line-height: 1.75; margin-bottom: 14px; }
+    .about-text-col ul { list-style: none; padding: 0; margin: 14px 0; }
+    .about-text-col ul li {
+      color: var(--text-dim);
+      padding: 6px 0 6px 20px;
+      position: relative;
+      line-height: 1.6;
+    }
+    .about-text-col ul li::before {
+      content: '✦';
+      position: absolute; left: 0;
+      color: var(--gold); font-size: .7em; top: 9px;
+    }
+    .diplomas-wrap { margin-top: 48px; text-align: center; }
+    .diplomas-wrap h3 { color: var(--gold-light); font-size: 1.2rem; margin-bottom: 20px; letter-spacing: .05em; }
+    .diplomas-img {
+      max-width: 700px;
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(201,168,76,.3);
+      box-shadow: 0 8px 40px rgba(0,0,0,.5);
+    }
+    @media(max-width:700px) {
+      .about-wrap { flex-direction: column; align-items: center; gap: 28px; }
+      .about-photo-col { flex: none; }
+      .about-photo { width: 200px; height: 230px; }
+    }
+
   </style>
 </head>
 <body>
@@ -1363,6 +1411,37 @@
     </div>
   </section>
 
+  <!-- ══ ABOUT ME ══ -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">Ваш проводник</p>
+      <h2>Ph.Dr. Ольга Турьева</h2>
+
+      <div class="about-wrap">
+        <div class="about-photo-col">
+          <img src="olga-photo.jpg" alt="Ph.Dr. Ольга Турьева" class="about-photo">
+        </div>
+        <div class="about-text-col">
+          <p>34 года кризисной практики. Кризисный психолог, физиотерапевт и телесный терапевт. Работала в Праге, сейчас — онлайн из Германии и ретриты очно. Ко мне приходят тогда, когда больше никто не помог: перед операциями, в разводах, после потерь.</p>
+          <p>Свой метод начала разрабатывать, когда врачи сказали, что моя дочь с гидроцефалией проживёт 7–10 лет. Продала машину, нашла китайского учителя, 9 месяцев училась. Дочери сняли инвалидность — сейчас ей за 30, знает 8 языков. Врачи давали 7–10 лет — тело оказалось умнее.</p>
+          <ul>
+            <li>Работаю через тело: тазовые кости, позвоночник, меридианы, банки, специальные приборы</li>
+            <li>Ретриты провожу с 2011 года — первые на Куршской косе в Калининграде</li>
+            <li>2 года вела закрытый клуб (48 участниц) — у тех, кто делал то, что я говорила, результаты космические</li>
+            <li>Работаю только с женщинами: женское тело реагирует иначе, женская психика требует другого пространства</li>
+            <li>Перед каждым ретритом лично созваниваюсь с каждой участницей</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="diplomas-wrap">
+        <h3>Образование и дипломы</h3>
+        <img src="diplomas.jpg" alt="Дипломы и сертификаты Ph.Dr. Ольги Турьевой" class="diplomas-img">
+      </div>
+
+    </div>
+  </section>
+
   <!-- ══ FAQ ══ -->
   <section id="faq">
     <div class="container">
@@ -1370,6 +1449,36 @@
       <h2>Всё, что важно знать до приезда</h2>
 
       <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Что такое Чёрный ретрит?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Чёрный ретрит — это 10 дней интенсивной работы с телом и психикой в условиях сенсорного ограничения. Участницы большую часть дня находятся с закрытыми глазами (мягкая тёмная повязка), что позволяет глубоко уйти внутрь себя и запустить процессы, недоступные в обычной жизни. Практики — индивидуальные и групповые: телесная терапия, кризисная психология, ThetaHealing, физиотерапия. Всё происходит на берегу Чёрного моря в Святом Власе, Болгария — в маленькой группе не более 8 женщин.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Почему нужно проходить собеседование перед ретритом?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Потому что ретрит — это интенсивная работа с психикой и телом, и мне важно понять, готова ли ты сейчас к этому формату. На собеседовании я узнаю твою историю, выясняю, есть ли противопоказания, и определяю, что именно тебе нужно — возможно, сначала нужна индивидуальная работа. Если понимаю, что сейчас не время — говорю честно и предлагаю другой формат. Я не набираю группу ради группы: каждая участница приходит осознанно и готова к работе.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Почему вы не берёте людей с психическими заболеваниями?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Потому что я психолог, а не психиатр. Моя работа — с психически здоровыми людьми, переживающими кризис: потеря, развод, выгорание, нереализованность. Людям с психиатрическими диагнозами (шизофрения, биполярное расстройство, тяжёлые депрессии с медикаментозным лечением) необходима помощь психиатра, и работать с ними в моём формате значило бы взять на себя ответственность, выходящую за рамки моей компетенции. Это было бы нечестно по отношению к ним.</p>
+          </div>
+        </div>
 
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
