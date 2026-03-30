@@ -297,9 +297,10 @@
     }
 
     .card-icon {
-      width: 56px; height: 56px;
-      background: linear-gradient(135deg, rgba(201,168,76,.2), rgba(212,130,154,.15));
-      border-radius: 16px;
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, rgba(201,168,76,.22), rgba(212,130,154,.12));
+      border-radius: 18px;
+      border: 1px solid rgba(201,168,76,.3);
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 22px;
     }
@@ -782,12 +783,12 @@
 
     /* Свечение иконок */
     @keyframes iconGlow {
-      0%, 100% { box-shadow: 0 0 0px rgba(201,168,76,0); }
-      50%       { box-shadow: 0 0 18px rgba(201,168,76,.45), 0 0 6px rgba(212,130,154,.3); }
+      0%, 100% { box-shadow: 0 0 0px rgba(201,168,76,0); background: linear-gradient(135deg,rgba(201,168,76,.18),rgba(212,130,154,.1)); }
+      50%       { box-shadow: 0 0 28px rgba(201,168,76,.7), 0 0 10px rgba(201,168,76,.4); background: linear-gradient(135deg,rgba(201,168,76,.35),rgba(212,130,154,.2)); }
     }
     @keyframes iconGlowRose {
-      0%, 100% { box-shadow: 0 0 0px rgba(212,130,154,0); }
-      50%       { box-shadow: 0 0 18px rgba(212,130,154,.5), 0 0 6px rgba(201,168,76,.2); }
+      0%, 100% { box-shadow: 0 0 0px rgba(212,130,154,0); background: linear-gradient(135deg,rgba(201,168,76,.18),rgba(212,130,154,.1)); }
+      50%       { box-shadow: 0 0 28px rgba(212,130,154,.7), 0 0 10px rgba(201,168,76,.35); background: linear-gradient(135deg,rgba(212,130,154,.25),rgba(201,168,76,.2)); }
     }
 
     /* Бегущий блик по бордеру badge */
@@ -891,9 +892,20 @@
     .whom-card:nth-child(2) .icon { animation: floatAlt 3.8s ease-in-out infinite, iconGlowRose 3.8s ease-in-out infinite; }
     .whom-card:nth-child(3) .icon { animation: float    4.2s ease-in-out infinite, iconGlow     4.2s ease-in-out infinite; }
 
-    .card:nth-child(1) .card-icon { animation: float    3.6s .4s ease-in-out infinite, iconGlow     3.6s .4s ease-in-out infinite; }
-    .card:nth-child(2) .card-icon { animation: floatAlt 4.0s .8s ease-in-out infinite, iconGlowRose 4.0s .8s ease-in-out infinite; }
-    .card:nth-child(3) .card-icon { animation: float    4.4s 1.2s ease-in-out infinite, iconGlow     4.4s 1.2s ease-in-out infinite; }
+    .card:nth-child(1) .card-icon { animation: float    3.6s .4s  ease-in-out infinite, iconGlow     3.6s .4s  ease-in-out infinite; }
+    .card:nth-child(2) .card-icon { animation: floatAlt 4.0s .8s  ease-in-out infinite, iconGlow     4.0s .8s  ease-in-out infinite; }
+    .card:nth-child(3) .card-icon { animation: float    4.4s 1.2s ease-in-out infinite, iconGlowRose 4.4s 1.2s ease-in-out infinite; }
+    .card:nth-child(4) .card-icon { animation: floatAlt 3.8s 1.6s ease-in-out infinite, iconGlow     3.8s 1.6s ease-in-out infinite; }
+    .card:nth-child(5) .card-icon { animation: float    4.2s 2.0s ease-in-out infinite, iconGlowRose 4.2s 2.0s ease-in-out infinite; }
+    .card:nth-child(6) .card-icon { animation: floatAlt 4.6s 2.4s ease-in-out infinite, iconGlow     4.6s 2.4s ease-in-out infinite; }
+
+    .info-card:nth-child(1) .info-card-icon { animation: float    3.5s .2s  ease-in-out infinite, iconGlow     3.5s .2s  ease-in-out infinite; }
+    .info-card:nth-child(2) .info-card-icon { animation: floatAlt 4.1s .6s  ease-in-out infinite, iconGlowRose 4.1s .6s  ease-in-out infinite; }
+    .info-card:nth-child(3) .info-card-icon { animation: float    3.9s 1.0s ease-in-out infinite, iconGlow     3.9s 1.0s ease-in-out infinite; }
+
+    .bonus-card:nth-child(1) .bonus-icon { animation: float    3.7s .3s  ease-in-out infinite, iconGlow     3.7s .3s  ease-in-out infinite; }
+    .bonus-card:nth-child(2) .bonus-icon { animation: floatAlt 4.3s .7s  ease-in-out infinite, iconGlowRose 4.3s .7s  ease-in-out infinite; }
+    .bonus-card:nth-child(3) .bonus-icon { animation: float    4.0s 1.1s ease-in-out infinite, iconGlow     4.0s 1.1s ease-in-out infinite; }
 
     /* ── Карточки — sweep при hover ── */
     .card::after, .whom-card::after {
@@ -928,10 +940,21 @@
     .detail-pill svg { transition: filter .3s; }
     .detail-pill:hover svg { filter: drop-shadow(0 0 4px rgba(201,168,76,.7)); }
 
+    /* ── Единый золотой цвет всех SVG иконок ── */
+    .card-icon svg path, .card-icon svg circle, .card-icon svg rect, .card-icon svg ellipse,
+    .info-card-icon svg path, .info-card-icon svg circle, .info-card-icon svg rect,
+    .bonus-icon svg path, .bonus-icon svg circle, .bonus-icon svg rect,
+    .icon svg path, .icon svg circle, .icon svg rect,
+    .dic-icon svg path, .dic-icon svg circle, .dic-icon svg rect {
+      stroke: #c9a84c;
+    }
+
     /* ── SVG иконки в карточках — glow при hover ── */
     .card:hover .card-icon svg,
+    .info-card:hover .info-card-icon svg,
+    .bonus-card:hover .bonus-icon svg,
     .whom-card:hover .icon svg {
-      filter: drop-shadow(0 0 5px rgba(201,168,76,.7));
+      filter: drop-shadow(0 0 8px rgba(201,168,76,.9));
       transition: filter .3s;
     }
 
@@ -1016,7 +1039,7 @@
     .info-card:hover { border-color: rgba(201,168,76,.65); background: rgba(255,255,255,.1); transform: translateY(-4px); }
     .info-card-icon {
       width: 72px; height: 72px;
-      background: rgba(201,168,76,.15);
+      background: linear-gradient(135deg, rgba(201,168,76,.22), rgba(212,130,154,.12));
       border-radius: 18px;
       border: 1px solid rgba(201,168,76,.3);
       display: flex; align-items: center; justify-content: center;
@@ -1052,7 +1075,14 @@
       margin-bottom: 12px;
       font-family: Georgia, serif;
     }
-    .bonus-icon { margin-bottom: 16px; }
+    .bonus-icon {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, rgba(201,168,76,.22), rgba(212,130,154,.12));
+      border-radius: 18px;
+      border: 1px solid rgba(201,168,76,.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
     .bonus-card h3 { color: var(--gold-light); font-size: 1.1rem; margin-bottom: 10px; }
     .bonus-card p { color: var(--text-dim); line-height: 1.7; font-size: .95rem; }
     .bonus-tag {
