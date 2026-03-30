@@ -354,6 +354,35 @@
 
     .detail-pill svg { flex-shrink: 0; }
 
+    /* ── DETAILS INFO GRID ── */
+    .details-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .details-info-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(201,168,76,.15);
+      border-radius: 16px;
+      padding: 24px 22px;
+      transition: border-color .3s, transform .3s;
+    }
+    .details-info-card:hover {
+      border-color: rgba(201,168,76,.4);
+      transform: translateY(-3px);
+    }
+    .details-info-card .detail-pill {
+      margin-bottom: 16px;
+      background: rgba(255,255,255,.06);
+    }
+    .details-info-text {
+      font-size: .86rem;
+      color: #9a9298;
+      line-height: 1.7;
+      margin: 0;
+    }
+
     /* ── CTA ── */
     #cta {
       text-align: center;
@@ -1031,35 +1060,53 @@
     <div class="container">
       <p class="section-label">Формат</p>
       <h2>10 дней, которые меняют всё</h2>
-      <div class="details-box">
-        <div class="detail-pill">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <rect x="2" y="3" width="14" height="13" rx="2" stroke="#c9a84c" stroke-width="1.4"/>
-            <path d="M6 2 L6 5 M12 2 L12 5" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round"/>
-            <path d="M2 8 L16 8" stroke="#c9a84c" stroke-width="1.2"/>
-          </svg>
-          10 дней / 9 ночей
+
+      <div class="details-info-grid">
+
+        <div class="details-info-card">
+          <div class="detail-pill">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect x="2" y="3" width="14" height="13" rx="2" stroke="#c9a84c" stroke-width="1.4"/>
+              <path d="M6 2 L6 5 M12 2 L12 5" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M2 8 L16 8" stroke="#c9a84c" stroke-width="1.2"/>
+            </svg>
+            10 дней / 9 ночей
+          </div>
+          <p class="details-info-text">Десять дней — это не отпуск. Это достаточно, чтобы прожить процесс по-настоящему: войти в глубину, пройти через кризис, интегрировать его и выйти с новым состоянием. Заезды с мая по октябрь каждый месяц.</p>
         </div>
-        <div class="detail-pill">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <circle cx="9" cy="9" r="6.5" stroke="#d4829a" stroke-width="1.4"/>
-            <path d="M9 5 L9 9.5 L12 11.5" stroke="#d4829a" stroke-width="1.4" stroke-linecap="round"/>
-          </svg>
-          Малая группа до 8 чел.
+
+        <div class="details-info-card">
+          <div class="detail-pill">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="9" cy="9" r="6.5" stroke="#d4829a" stroke-width="1.4"/>
+              <path d="M9 5 L9 9.5 L12 11.5" stroke="#d4829a" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            Малая группа до 8 чел.
+          </div>
+          <p class="details-info-text">Только 8 женщин — тщательный отбор. Никакого потока и массовости. Ведущая знает каждую участницу лично, следит за состоянием каждой. В такой группе рождается настоящая близость и поддержка.</p>
         </div>
-        <div class="detail-pill">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <path d="M9 2 C5.7 2 3 4.7 3 8 C3 12.5 9 16 9 16 C9 16 15 12.5 15 8 C15 4.7 12.3 2 9 2Z" stroke="#c9a84c" stroke-width="1.4" fill="none"/>
-            <circle cx="9" cy="8" r="2.5" stroke="#c9a84c" stroke-width="1.3"/>
-          </svg>
-          Болгария · Черное море
+
+        <div class="details-info-card">
+          <div class="detail-pill">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M9 2 C5.7 2 3 4.7 3 8 C3 12.5 9 16 9 16 C9 16 15 12.5 15 8 C15 4.7 12.3 2 9 2Z" stroke="#c9a84c" stroke-width="1.4" fill="none"/>
+              <circle cx="9" cy="8" r="2.5" stroke="#c9a84c" stroke-width="1.3"/>
+            </svg>
+            Болгария · Черное море
+          </div>
+          <p class="details-info-text">Святой Влас — тихий курорт без шума и вечеринок. Отдельный дом в 200 метрах от моря, новые апартаменты, трёхразовое питание с поваром. Бургас — всего 35 км, трансфер бесплатно.</p>
         </div>
-        <div class="detail-pill">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <path d="M9 2 L11.2 7.2 L17 7.2 L12.4 10.6 L14.2 16 L9 12.4 L3.8 16 L5.6 10.6 L1 7.2 L6.8 7.2 Z" stroke="#d4829a" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
-          </svg>
-          Ведущая: Ph.Dr. Ольга Турьева
+
+        <div class="details-info-card">
+          <div class="detail-pill">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M9 2 L11.2 7.2 L17 7.2 L12.4 10.6 L14.2 16 L9 12.4 L3.8 16 L5.6 10.6 L1 7.2 L6.8 7.2 Z" stroke="#d4829a" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+            </svg>
+            Ведущая: Ph.Dr. Ольга Турьева
+          </div>
+          <p class="details-info-text">34 года кризисной практики. Физиотерапевт, психолог, телесный терапевт. Работала с людьми перед операциями, в разводах, после потерь. Приходят тогда, когда больше никто не помог.</p>
         </div>
+
       </div>
     </div>
   </section>
