@@ -997,6 +997,34 @@
       .divider-quote { font-size: 1.1rem; }
     }
 
+    /* ── Info Cards ── */
+    .info-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 20px;
+    }
+    .info-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: border-color .3s, transform .3s;
+    }
+    .info-card:hover { border-color: rgba(201,168,76,.45); transform: translateY(-4px); }
+    .info-card-icon {
+      width: 72px; height: 72px;
+      background: rgba(201,168,76,.1);
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .info-card h3 { color: var(--gold-light); font-size: 1.2rem; margin-bottom: 12px; }
+    .info-card p { color: var(--text-dim); line-height: 1.65; margin-bottom: 20px; font-size: .95rem; }
+    .info-card .whom-more { text-align: left; }
+    @media(max-width:800px) { .info-cards-grid { grid-template-columns: 1fr; } }
+
     /* ── Bonuses ── */
     #bonuses { background: rgba(201,168,76,.04); }
     .bonus-grid {
@@ -1777,6 +1805,101 @@
           </button>
           <div class="faq-a">
             <p>При отмене за 30 и более дней — предоплата возвращается полностью. За 14–30 дней — 50%. Менее чем за 14 дней — предоплата не возвращается, но место можно передать подруге (по согласованию). Форс-мажорные обстоятельства рассматриваем индивидуально — я живой человек и понимаю, что жизнь непредсказуема.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ INFO CARDS ══ -->
+  <section id="info-cards">
+    <div class="container">
+      <div class="info-cards-grid">
+
+        <!-- Стоимость -->
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="14" stroke="#c9a84c" stroke-width="1.6" fill="none"/>
+              <path d="M18 8 L18 10 M18 26 L18 28" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M13 13 C13 11 15 10 18 10 C21 10 23 11.5 23 13.5 C23 15.5 21 16.5 18 17.5 C15 18.5 13 19.5 13 22 C13 24 15 26 18 26 C21 26 23 24.5 23 22.5" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Стоимость</h3>
+          <p>Всё включено — проживание, питание, программа, физиотерапия и трансфер.</p>
+          <button class="btn-more info-btn" onclick="toggleMore(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="whom-more">
+            <div class="whom-more-text">
+              <ul>
+                <li><strong style="color:var(--gold-light);">Полная стоимость:</strong> уточняется на собеседовании — зависит от даты заезда и типа размещения</li>
+                <li><strong style="color:var(--gold-light);">Включено:</strong> проживание 10 дней, трёхразовое питание (повар в доме), вся программа ретрита, индивидуальная кризисная сессия, физиотерапия и коррекция тела, все материалы для практик</li>
+                <li><strong style="color:var(--gold-light);">Бонус раннего бронирования:</strong> трансфер из аэропорта Бургас бесплатно</li>
+                <li><strong style="color:var(--gold-light);">Реферальная программа:</strong> пригласи подругу — получи скидку 10% после её оплаты</li>
+                <li><strong style="color:var(--gold-light);">Не включено:</strong> перелёт, трансфер из Варны (скидка 50%), личные расходы</li>
+              </ul>
+              Оплата поэтапно: предоплата при бронировании, остаток — за 30 дней до заезда. Для уточнения стоимости запишитесь на собеседование.
+            </div>
+          </div>
+        </div>
+
+        <!-- Программа по дням -->
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="4" y="6" width="28" height="26" rx="3" stroke="#d4829a" stroke-width="1.6" fill="none"/>
+              <path d="M12 3 L12 9 M24 3 L24 9" stroke="#d4829a" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M4 14 L32 14" stroke="#d4829a" stroke-width="1.4"/>
+              <rect x="9" y="18" width="4" height="4" rx="1" fill="rgba(212,130,154,.4)" stroke="#d4829a" stroke-width="1"/>
+              <rect x="16" y="18" width="4" height="4" rx="1" fill="rgba(212,130,154,.2)" stroke="#d4829a" stroke-width="1"/>
+              <rect x="23" y="18" width="4" height="4" rx="1" fill="rgba(212,130,154,.2)" stroke="#d4829a" stroke-width="1"/>
+              <rect x="9" y="25" width="4" height="4" rx="1" fill="rgba(212,130,154,.2)" stroke="#d4829a" stroke-width="1"/>
+              <rect x="16" y="25" width="4" height="4" rx="1" fill="rgba(212,130,154,.2)" stroke="#d4829a" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3>Программа по дням</h3>
+          <p>10 дней — выверенный цикл. Каждый день выстроен так, чтобы вести тебя глубже, а не overwhelm.</p>
+          <button class="btn-more info-btn" onclick="toggleMore(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="whom-more">
+            <div class="whom-more-text">
+              <ul>
+                <li><strong style="color:var(--gold-light);">День 1:</strong> приезд, знакомство, настройка на пространство и друг друга. Вечером — первый общий круг</li>
+                <li><strong style="color:var(--gold-light);">Дни 2–3:</strong> замедление, работа с телом, первые практики присутствия. Группа А начинает работу с повязками</li>
+                <li><strong style="color:var(--gold-light);">Дни 4–5:</strong> углубление. Телесные сессии, кризисная работа, ThetaHealing в парах и группе</li>
+                <li><strong style="color:var(--gold-light);">День 6:</strong> интеграция — группы встречаются, делятся опытом, меняются ролями</li>
+                <li><strong style="color:var(--gold-light);">Дни 7–8:</strong> Группа Б работает с закрытыми глазами — Группа А становится поддержкой</li>
+                <li><strong style="color:var(--gold-light);">День 9:</strong> физиотерапия, коррекция тела, обучение авторской технике выхода из стресса</li>
+                <li><strong style="color:var(--gold-light);">День 10:</strong> ритуал закрытия, личный план на три месяца «после», прощальный вечер у моря</li>
+              </ul>
+              Каждое утро — практика у воды. Каждый вечер — круг. Питание трижды в день. Свободное время — для интеграции, сна, моря.
+            </div>
+          </div>
+        </div>
+
+        <!-- Почему это работает -->
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M18 3 C10 3 4 9 4 17 C4 23 8 28 13.5 30.5 L13.5 33 L18 31.5 L22.5 33 L22.5 30.5 C28 28 32 23 32 17 C32 9 26 3 18 3Z" stroke="#c9a84c" stroke-width="1.6" fill="none"/>
+              <path d="M18 11 C15.2 11 13 13.2 13 16 C13 18.5 14.8 20.5 17 21 L17 24" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="17" cy="26.5" r="1.2" fill="#c9a84c"/>
+            </svg>
+          </div>
+          <h3>Почему это работает</h3>
+          <p>Сенсорное ограничение — один из самых мощных инструментов изменения, известных науке.</p>
+          <button class="btn-more info-btn" onclick="toggleMore(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="whom-more">
+            <div class="whom-more-text">
+              Когда мы закрываем глаза, мозг перестаёт обрабатывать 80% внешней информации — и направляет ресурс внутрь. Именно там живут паттерны, которые управляют нашей жизнью.
+              <ul>
+                <li><strong style="color:var(--gold-light);">Нейронаука:</strong> в сенсорном ограничении активируется дефолтная сеть мозга — зона, отвечающая за самопознание и переработку травм</li>
+                <li><strong style="color:var(--gold-light);">Тело как ключ:</strong> психологические блоки хранятся в теле — через физиотерапию и телесные практики мы обходим ментальные защиты</li>
+                <li><strong style="color:var(--gold-light);">ThetaHealing:</strong> работа в тета-ритме мозга (4–7 Гц) позволяет переписывать убеждения на уровне подсознания</li>
+                <li><strong style="color:var(--gold-light);">Групповой контейнер:</strong> присутствие других женщин создаёт безопасность, в которой возможно то, что не происходит в одиночестве</li>
+                <li><strong style="color:var(--gold-light);">10 дней:</strong> именно столько нужно для формирования нового нейронного паттерна — по данным нейропластичности</li>
+              </ul>
+              34 года практики + современная нейронаука + авторский метод = результаты, которые остаются после.
+            </div>
           </div>
         </div>
 
