@@ -998,6 +998,7 @@
     }
 
     /* ── Info Cards ── */
+    #info-cards { background: rgba(201,168,76,.04); }
     .info-cards-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1005,18 +1006,19 @@
       margin-top: 20px;
     }
     .info-card {
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(201,168,76,.2);
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(201,168,76,.35);
       border-radius: 20px;
       padding: 36px 28px;
       text-align: center;
-      transition: border-color .3s, transform .3s;
+      transition: border-color .3s, transform .3s, background .3s;
     }
-    .info-card:hover { border-color: rgba(201,168,76,.45); transform: translateY(-4px); }
+    .info-card:hover { border-color: rgba(201,168,76,.65); background: rgba(255,255,255,.1); transform: translateY(-4px); }
     .info-card-icon {
       width: 72px; height: 72px;
-      background: rgba(201,168,76,.1);
+      background: rgba(201,168,76,.15);
       border-radius: 18px;
+      border: 1px solid rgba(201,168,76,.3);
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 20px;
     }
@@ -2016,7 +2018,7 @@
 
   // ── Подробнее / Скрыть (whom-card и card) ──
   function toggleMore(btn) {
-    const card = btn.closest('.whom-card, .card');
+    const card = btn.closest('.whom-card, .card, .info-card');
     const isOpen = card.classList.toggle('open');
     btn.innerHTML = isOpen
       ? 'Скрыть <i class="arrow">↓</i>'
