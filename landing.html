@@ -201,6 +201,66 @@
       line-height: 1.65;
     }
 
+    /* ── ПОДРОБНЕЕ — кнопка и расширенный текст ── */
+    .whom-more {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .45s ease, opacity .35s ease;
+      opacity: 0;
+    }
+    .whom-card.open .whom-more {
+      max-height: 600px;
+      opacity: 1;
+    }
+    .whom-more-text {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(201,168,76,.18);
+      font-size: .84rem;
+      color: #b0a8ac;
+      line-height: 1.7;
+    }
+    .whom-more-text ul {
+      list-style: none;
+      padding: 0; margin: 10px 0 0;
+    }
+    .whom-more-text ul li {
+      padding: 4px 0 4px 18px;
+      position: relative;
+      color: #b0a8ac;
+    }
+    .whom-more-text ul li::before {
+      content: '◈';
+      position: absolute; left: 0;
+      color: var(--gold);
+      font-size: .65rem;
+      top: 7px;
+    }
+    .btn-more {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 16px;
+      background: none;
+      border: 1px solid rgba(201,168,76,.35);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: .78rem;
+      color: var(--gold);
+      letter-spacing: .06em;
+      cursor: pointer;
+      transition: border-color .25s, background .25s, color .25s;
+      font-family: inherit;
+    }
+    .btn-more:hover {
+      background: rgba(201,168,76,.12);
+      border-color: rgba(201,168,76,.7);
+    }
+    .btn-more .arrow {
+      display: inline-block;
+      transition: transform .3s;
+      font-style: normal;
+    }
+    .whom-card.open .btn-more .arrow { transform: rotate(180deg); }
+
     /* ── BENEFITS ── */
     #benefits { padding-top: 0; }
 
@@ -784,6 +844,19 @@
           </div>
           <h3>Ты потеряла себя</h3>
           <p>В роли матери, жены, руководителя — ты всем нужна, но забыла, кто ты на самом деле. Пора вспомнить.</p>
+          <button class="btn-more" onclick="toggleMore(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="whom-more">
+            <div class="whom-more-text">
+              Ты отдаёшь другим так долго, что перестала понимать, чего хочешь сама. Управляешь домом, карьерой, отношениями — но внутри живёт тихое ощущение: «Я живу не своей жизнью».
+              <ul>
+                <li>Каждое утро просыпаешься и думаешь: «Это всё?»</li>
+                <li>Не можешь вспомнить, что тебя по-настоящему радует</li>
+                <li>Чувствуешь себя нужной всем — и не нужной себе</li>
+                <li>Внутри пустота, которую не заполняет ни работа, ни отдых</li>
+              </ul>
+              Ретрит помогает вспомнить, кто ты есть — без ролей, без обязанностей, без чужих ожиданий. Ты возвращаешься к себе первоначальной.
+            </div>
+          </div>
         </div>
 
         <div class="whom-card">
@@ -795,6 +868,19 @@
           </div>
           <h3>Хроническая усталость</h3>
           <p>Даже после отпуска ты не восстанавливаешься. Нужна настоящая перезагрузка — глубокая, системная.</p>
+          <button class="btn-more" onclick="toggleMore(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="whom-more">
+            <div class="whom-more-text">
+              Это не обычная усталость, которая проходит за выходные. Это глубокое выгорание, когда тело посылает сигналы — боли в спине, шее, голове, тазовой области — а обследования «ничего не находят».
+              <ul>
+                <li>Просыпаешься уже уставшей, даже после сна</li>
+                <li>Отпуск не помогает — через три дня снова в режиме «надо»</li>
+                <li>Тело болит, но врачи говорят: всё в норме</li>
+                <li>Внутренний шум не выключается даже ночью</li>
+              </ul>
+              Тело умнее нас. Оно всё помнит — и умеет восстанавливаться, если ему помочь правильно. 4 дня с закрытыми глазами дадут то, чего не дал ни один отпуск.
+            </div>
+          </div>
         </div>
 
         <div class="whom-card">
@@ -806,6 +892,19 @@
           </div>
           <h3>Жажда перемен</h3>
           <p>Ты чувствуешь, что стоишь на пороге нового этапа. Нужно пространство, чтобы прислушаться к себе и сделать шаг.</p>
+          <button class="btn-more" onclick="toggleMore(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="whom-more">
+            <div class="whom-more-text">
+              Ты понимаешь: что-то должно измениться. В отношениях, в работе, в себе. Но не знаешь, с чего начать. Или боишься сделать шаг. Или просто не слышишь себя в потоке ежедневного шума.
+              <ul>
+                <li>Чувствуешь, что живёшь «не свою» жизнь</li>
+                <li>Откладываешь важные решения — снова и снова</li>
+                <li>Внутри есть голос, который что-то знает — но ты его не слышишь</li>
+                <li>Хочется ясности: куда идти и кем быть дальше</li>
+              </ul>
+              Ретрит создаёт тишину, в которой этот голос становится слышен. Ты выходишь с пониманием — не рубахой-парнем, а женщиной, которая знает, чего хочет, и уверенно делает шаг.
+            </div>
+          </div>
         </div>
 
       </div>
@@ -1022,6 +1121,15 @@
   }, { threshold: 0.12 });
 
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ── Подробнее / Скрыть ──
+  function toggleMore(btn) {
+    const card = btn.closest('.whom-card');
+    const isOpen = card.classList.toggle('open');
+    btn.innerHTML = isOpen
+      ? 'Скрыть <i class="arrow">↓</i>'
+      : 'Подробнее <i class="arrow">↓</i>';
+  }
 </script>
 </body>
 </html>
