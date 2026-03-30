@@ -1134,56 +1134,110 @@
       <div class="details-info-grid">
 
         <div class="details-info-card">
-          <div class="detail-pill">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <rect x="2" y="3" width="14" height="13" rx="2" stroke="#c9a84c" stroke-width="1.4"/>
-              <path d="M6 2 L6 5 M12 2 L12 5" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round"/>
-              <path d="M2 8 L16 8" stroke="#c9a84c" stroke-width="1.2"/>
+          <div class="dic-icon dic-icon--gold">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="3" y="5" width="26" height="24" rx="4" stroke="#c9a84c" stroke-width="1.8" fill="none"/>
+              <path d="M10 3 L10 8 M22 3 L22 8" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M3 13 L29 13" stroke="#c9a84c" stroke-width="1.5"/>
+              <rect x="9" y="18" width="4" height="4" rx="1" fill="rgba(201,168,76,.4)" stroke="#c9a84c" stroke-width="1"/>
+              <rect x="19" y="18" width="4" height="4" rx="1" fill="rgba(201,168,76,.2)" stroke="#c9a84c" stroke-width="1"/>
             </svg>
-            10 дней / 9 ночей
           </div>
-          <div class="details-divider"></div>
-          <p class="details-info-text">Десять дней — это не отпуск и не «перезагрузка на выходных». Это ровно столько, сколько нужно, чтобы войти в глубину, прожить процесс по-настоящему, интегрировать его — и выйти с устойчивым новым состоянием.</p>
-          <p class="details-info-text" style="margin-top:10px;">Первые дни — замедление и вход. Середина — самая глубокая работа. Последние дни — интеграция и план действий на «после». Заезды с мая по октябрь, каждый месяц.</p>
+          <div class="dic-title">10 дней / 9 ночей</div>
+          <p class="dic-desc">Не отпуск — трансформация. Заезды с мая по октябрь, каждый месяц.</p>
+          <button class="btn-more" onclick="toggleDic(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="dic-more">
+            <div class="details-divider"></div>
+            <div class="dic-more-text">
+              Десять дней — ровно столько, сколько нужно, чтобы войти в глубину, прожить процесс по-настоящему и выйти с устойчивым новым состоянием.
+              <ul>
+                <li>Дни 1–2: замедление, знакомство, настрой на пространство</li>
+                <li>Дни 2–5: Группа А — работа с закрытыми глазами, Группа Б — поддержка</li>
+                <li>День 6: интеграция, обмен опытом, смена ролей</li>
+                <li>Дни 7–9: Группа Б погружается, Группа А — опора</li>
+                <li>День 10: ритуал закрытия, личный план действий на «после»</li>
+              </ul>
+              <p style="margin-top:10px;">Меньше — недостаточно, чтобы прожить процесс. Десять дней выверены годами практики.</p>
+            </div>
+          </div>
         </div>
 
         <div class="details-info-card">
-          <div class="detail-pill">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <circle cx="9" cy="9" r="6.5" stroke="#d4829a" stroke-width="1.4"/>
-              <path d="M9 5 L9 9.5 L12 11.5" stroke="#d4829a" stroke-width="1.4" stroke-linecap="round"/>
+          <div class="dic-icon dic-icon--rose">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <circle cx="12" cy="10" r="5" stroke="#d4829a" stroke-width="1.8" fill="none"/>
+              <circle cx="22" cy="13" r="4" stroke="#d4829a" stroke-width="1.6" fill="none"/>
+              <path d="M2 27 C2 21 6.5 17 12 17 C17.5 17 22 21 22 27" stroke="#d4829a" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+              <path d="M22 17 C25.5 17 28 20 28 24" stroke="#d4829a" stroke-width="1.5" stroke-linecap="round" fill="none"/>
             </svg>
-            Малая группа до 8 чел.
           </div>
-          <div class="details-divider"></div>
-          <p class="details-info-text">Только 8 женщин — и это принципиально. Никакого потока, никакой массовости. Ведущая лично знает каждую участницу: созванивается до приезда, следит за состоянием каждый день, работает индивидуально.</p>
-          <p class="details-info-text" style="margin-top:10px;">Группа делится на две части: пока одна работает с закрытыми глазами — вторая становится её поддержкой и опорой. Потом меняются. В такой глубине рождается близость, которая остаётся на годы.</p>
+          <div class="dic-title">Малая группа до 8 чел.</div>
+          <p class="dic-desc">Тщательный отбор. Ведущая лично знает каждую участницу.</p>
+          <button class="btn-more" onclick="toggleDic(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="dic-more">
+            <div class="details-divider"></div>
+            <div class="dic-more-text">
+              Только 8 женщин — никакого потока и массовости. Перед ретритом личный созвон с каждой, отбор по анкете.
+              <ul>
+                <li>Ведущая следит за состоянием каждой участницы каждый день</li>
+                <li>Одна группа работает в масках — другая поддерживает. Потом меняются</li>
+                <li>Рядом постоянно есть тот, кто ведёт за руку — к морю, к столу, в туалет</li>
+                <li>В такой глубине рождается близость, которая остаётся на годы</li>
+              </ul>
+              <p style="margin-top:10px;">Участницы часто говорят: «Я впервые почувствовала, что меня держат». Это возможно только в малой группе.</p>
+            </div>
+          </div>
         </div>
 
         <div class="details-info-card">
-          <div class="detail-pill">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M9 2 C5.7 2 3 4.7 3 8 C3 12.5 9 16 9 16 C9 16 15 12.5 15 8 C15 4.7 12.3 2 9 2Z" stroke="#c9a84c" stroke-width="1.4" fill="none"/>
-              <circle cx="9" cy="8" r="2.5" stroke="#c9a84c" stroke-width="1.3"/>
+          <div class="dic-icon dic-icon--gold">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3 C9.4 3 4 8.4 4 15 C4 23 16 30 16 30 C16 30 28 23 28 15 C28 8.4 22.6 3 16 3Z" stroke="#c9a84c" stroke-width="1.8" fill="none"/>
+              <circle cx="16" cy="15" r="4" stroke="#c9a84c" stroke-width="1.6" fill="rgba(201,168,76,.15)"/>
+              <path d="M16 11 L16 8 M16 22 L16 19 M10 15 L7 15 M25 15 L22 15" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round"/>
             </svg>
-            Болгария · Черное море
           </div>
-          <div class="details-divider"></div>
-          <p class="details-info-text">Святой Влас — тихий курорт без шума, вечеринок и туристических толп. Отдельный дом в 200 метрах от моря. Новые апартаменты, всё новое: мебель, постельное, техника.</p>
-          <p class="details-info-text" style="margin-top:10px;">Трёхразовое питание готовит повар прямо в доме. Аэропорт Бургас — 35 км, трансфер бесплатно. С мая море уже 20–22°, можно плавать. Удобный маршрут: через Стамбул прямым рейсом на Бургас.</p>
+          <div class="dic-title">Болгария · Черное море</div>
+          <p class="dic-desc">Святой Влас. 200 м от моря. Тишина, природа, новые апартаменты.</p>
+          <button class="btn-more" onclick="toggleDic(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="dic-more">
+            <div class="details-divider"></div>
+            <div class="dic-more-text">
+              Тихий курорт без шума и вечеринок. Отдельный дом — всего 33 квартиры, уютно и камерно.
+              <ul>
+                <li>200 метров от моря — выход прямо к воде</li>
+                <li>Новые апартаменты: мебель, постельное, техника — только новое</li>
+                <li>Трёхразовое питание готовит повар прямо в доме</li>
+                <li>Аэропорт Бургас — 35 км, трансфер бесплатно</li>
+                <li>С мая море 20–22°, можно плавать с первого дня</li>
+              </ul>
+              <p style="margin-top:10px;">Удобный маршрут: Москва или Петербург → Стамбул → Бургас (прямые рейсы с мая).</p>
+            </div>
+          </div>
         </div>
 
         <div class="details-info-card details-info-card--featured">
-          <div class="detail-pill">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M9 2 L11.2 7.2 L17 7.2 L12.4 10.6 L14.2 16 L9 12.4 L3.8 16 L5.6 10.6 L1 7.2 L6.8 7.2 Z" stroke="#d4829a" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+          <div class="dic-icon dic-icon--rose">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3 L19.5 12 L29 12 L21.5 18 L24.5 28 L16 22 L7.5 28 L10.5 18 L3 12 L12.5 12 Z" stroke="#d4829a" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
             </svg>
-            Ведущая: Ph.Dr. Ольга Турьева
           </div>
-          <div class="details-divider"></div>
-          <p class="details-info-text">34 года кризисной практики. Кризисный психолог, физиотерапевт и телесный терапевт. 15 лет работала в Праге — ко мне приходили тогда, когда больше никто не помог: перед операциями, в разводах, после потерь.</p>
-          <p class="details-info-text" style="margin-top:10px;">Свой метод начала разрабатывать, когда врачи сказали, что моя дочь с гидроцефалией проживёт 7–10 лет. Продала машину, нашла китайского учителя, 9 месяцев училась. Дочери сняли инвалидность — сейчас ей за 30, знает 8 языков.</p>
-          <p class="details-info-text" style="margin-top:10px;">Ретриты провожу с 2011 года. Первые — на Куршской косе в Калининграде. Результаты: женщины меняли профессии, выходили из многолетних кризисов, налаживали отношения с собой и с мужчинами.</p>
+          <div class="dic-title">Ph.Dr. Ольга Турьева</div>
+          <p class="dic-desc">34 года кризисной практики. Психолог, физиотерапевт, телесный терапевт.</p>
+          <button class="btn-more" onclick="toggleDic(this)">Подробнее <i class="arrow">↓</i></button>
+          <div class="dic-more">
+            <div class="details-divider"></div>
+            <div class="dic-more-text">
+              15 лет практики в Праге — приходили тогда, когда больше никто не помог: перед операциями, в разводах, после потерь. Сейчас работаю онлайн из Германии и провожу ретриты в Болгарии.
+              <ul>
+                <li>Свой метод разработала когда врачи дали дочери 7–10 лет жизни (гидроцефалия). Продала машину, 9 месяцев у китайского учителя. Дочери сняли инвалидность — сейчас за 30, знает 8 языков</li>
+                <li>Работаю через тело: тазовые кости, позвоночник, меридианы, банки, специальные приборы</li>
+                <li>Ретриты с 2011 года — первые на Куршской косе в Калининграде</li>
+                <li>Результаты участниц: смена профессий, выход из кризисов, новые отношения с собой и мужчинами</li>
+              </ul>
+              <p style="margin-top:10px;">Перед каждым ретритом лично созваниваюсь с каждой участницей. Если понимаю, что сейчас не время — говорю честно.</p>
+            </div>
+          </div>
         </div>
 
       </div>
