@@ -450,6 +450,63 @@
     .details-info-card:nth-child(4) .dic-icon { animation: floatAlt 4.7s .9s ease-in-out infinite, iconGlowRose 4.7s .9s ease-in-out infinite; }
     .details-info-card:hover .dic-icon svg { filter: drop-shadow(0 0 6px rgba(201,168,76,.8)); transition: filter .3s; }
 
+    /* ── FAQ ── */
+    #faq { padding: 80px 20px; }
+    .faq-list { max-width: 780px; margin: 48px auto 0; }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(201,168,76,.18);
+      overflow: hidden;
+    }
+    .faq-item:first-child { border-top: 1px solid rgba(201,168,76,.18); }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+      font-size: .98rem;
+      font-weight: 600;
+      color: #e8e0d5;
+      transition: color .25s;
+    }
+    .faq-q:hover { color: var(--gold-light); }
+    .faq-q span { flex: 1; line-height: 1.4; }
+
+    .faq-arrow {
+      flex-shrink: 0;
+      font-style: normal;
+      font-size: 1rem;
+      color: var(--gold);
+      transition: transform .35s;
+    }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-item.open .faq-q { color: var(--gold-light); }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .45s ease, opacity .35s ease;
+      opacity: 0;
+    }
+    .faq-item.open .faq-a {
+      max-height: 400px;
+      opacity: 1;
+    }
+    .faq-a p {
+      font-size: .9rem;
+      color: #a8a0ac;
+      line-height: 1.75;
+      padding-bottom: 22px;
+    }
+
     .details-info-card--featured { border-color: rgba(212,130,154,.3); background: linear-gradient(135deg, rgba(212,130,154,.06) 0%, rgba(255,255,255,.01) 100%); }
     .details-info-card--featured:hover { border-color: rgba(212,130,154,.6); }
 
@@ -1306,6 +1363,119 @@
     </div>
   </section>
 
+  <!-- ══ FAQ ══ -->
+  <section id="faq">
+    <div class="container">
+      <p class="section-label">Вопросы и ответы</p>
+      <h2>Всё, что важно знать до приезда</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Безопасно ли ходить с маской на глазах несколько часов в день?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Да. Маска — это мягкая тёмная повязка, как в самолёте. Вы можете снять её в любой момент без объяснений. Никакого принуждения — ваша психика сама регулирует глубину погружения. Рядом всегда кто-то есть: в туалет, к морю, к столу — вас ведут за руку. Вы никогда не остаётесь одна в темноте.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Что если мне станет страшно или плохо?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Это нормальная часть процесса — страх и сопротивление означают, что работа идёт. Я как кризисный психолог с 34-летним опытом слежу за состоянием каждой участницы. При необходимости — выходим из практики, работаем индивидуально, даём время. Никто не остаётся один в сложном состоянии. Группа — ваша живая поддержка 24 часа в сутки.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Есть ли противопоказания?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Да. Острые психотические состояния, тяжёлые психиатрические диагнозы в стадии обострения, беременность. Обо всём важном говорим на предварительном созвоне — он обязателен для каждой участницы. Иногда я честно говорю: сейчас не время — и предлагаю другой формат работы. Ваша безопасность важнее, чем заполнить место в группе.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Что входит в стоимость, а что нет?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p><strong style="color:var(--gold);">Включено:</strong> проживание 10 дней, трёхразовое питание (повар в доме), вся программа ретрита, индивидуальная кризисная сессия, физиотерапевтическая диагностика и коррекция тела, трансфер из аэропорта Бургас, все материалы и инструменты для практик.</p>
+            <p style="margin-top:8px;"><strong style="color:var(--rose);">Не включено:</strong> перелёт, трансфер из Варны (50% скидка), личные расходы, алкоголь.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Можно ли приехать не на все 10 дней?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Нет. Формат выстроен как единый цикл: погружение → смена → интеграция. Уйти в середине — значит прервать процесс в самом уязвимом месте. Это не жёсткое правило, а забота о вас: незавершённый процесс может быть тяжелее, чем если бы его не начинали. Пожалуйста, планируйте заранее и закрывайте все дела до приезда.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Как организовано питание и проживание?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Апартаменты новые — дом сдан недавно, вся мебель, постельное бельё, техника только новое. Дом отдельно стоящий, всего 33 квартиры — тихо и камерно. 200 метров от моря. Повар готовит завтрак, обед и ужин прямо в доме — вы ни о чём не думаете. Особые пожелания по питанию обсуждаем заранее.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Нужна ли виза? Как добраться?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Болгария вступила в Шенген с января 2025 года — виза открывается легко, болгары лояльны к русскоязычным. Удобный маршрут: Москва или Петербург → Стамбул → Бургас (прямые рейсы с мая). Из Бургаса до Святого Власа 35 км — встречаю лично, трансфер бесплатно. Если летите через Варну — трансфер со скидкой 50%.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>С кем я буду жить в номере?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Расселение по 1–2 человека в апартаменты. Если хотите жить одна — возможно, это учитывается в стоимости. Если комфортно с соседкой — подберём по характеру и запросу. Предпочтения обсуждаем при бронировании на предварительном созвоне.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>На каком языке проходит ретрит?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>Только на русском языке. Группа полностью русскоговорящая. Это принципиально — глубокая психологическая работа требует родного языка, точных слов и тонких нюансов. В чужом языке такой глубины не достичь.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Можно ли вернуть предоплату, если планы изменятся?</span>
+            <i class="faq-arrow">↓</i>
+          </button>
+          <div class="faq-a">
+            <p>При отмене за 30 и более дней — предоплата возвращается полностью. За 14–30 дней — 50%. Менее чем за 14 дней — предоплата не возвращается, но место можно передать подруге (по согласованию). Форс-мажорные обстоятельства рассматриваем индивидуально — я живой человек и понимаю, что жизнь непредсказуема.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ══ CTA ══ -->
   <section id="cta">
     <div class="container">
@@ -1406,6 +1576,12 @@
   }, { threshold: 0.12 });
 
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ── FAQ аккордеон ──
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.toggle('open');
+  }
 
   // ── Подробнее / Скрыть (whom-card и card) ──
   function toggleMore(btn) {
